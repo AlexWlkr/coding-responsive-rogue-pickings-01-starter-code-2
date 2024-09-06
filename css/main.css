@@ -1,5 +1,5 @@
 
-/******** Stuck on step 6 ********/
+/******** edit widths, paddings, border (color and size) for media queries ********/
 
 
 /******** GLOBAL STYLES ********/
@@ -16,7 +16,7 @@ body {
 /* The width property has been changed to max-width */
 .content-wrapper {
 	max-width: 1200px;
-	width:90%
+	width: 90%;
 	display: flex;
 	Justify-content: center;
 	flex-flow: row wrap;
@@ -49,6 +49,7 @@ h4 {
 }
 
 p {
+	font-size: 1rem;
 	line-height: 36px;
 }
 
@@ -63,7 +64,7 @@ header {
 header h1 {
 	margin: 0;
 	padding: 38px 0 20px 0;
-	width: 100%
+	width: 100%;
 	border-bottom: 3px solid #45610E;
 
 	
@@ -75,7 +76,7 @@ header h1 span {
 
 header nav {
 	padding: 20px 0;
-	width: 100%
+	
 }
 
 header nav ul {
@@ -89,6 +90,7 @@ header nav ul li {
 	font-weight: 700;
 	text-transform: uppercase;
 	padding: 10px 0;
+	width: 100%
 }
 
 header nav ul li a {
@@ -108,7 +110,7 @@ header nav ul li a {
 
 .main-title h2 {
 	color: #45610E;
-	padding: 10px 0;
+	padding: 5px 0;
 }
 
 /******** BOTTOM SECTION ********/
@@ -132,20 +134,20 @@ header nav ul li a {
 
 .section-one {
 	/* width: 29%; */
-	width: 100%
+	width: 100%;
 	border-bottom: 5px solid #EEE;
 }
 
 .section-two {
 	/* width: 42%; */
-	width: 100%
+	width: 100%;
 	border-top: 5px solid #EEE;
 	border-bottom: 5px solid #EEE;
 }
 
 .section-three {
 	/* width: 29%; */
-	width: 100%
+	width: 100%;
 	border-bottom: 5px solid #EEE;
 
 }
@@ -165,6 +167,7 @@ header nav ul li a {
 	line-height: 36px;
 }
 
+
 /******** FOOTER STYLES ********/
 /* The widths are in a percentage! */
 footer {
@@ -180,3 +183,69 @@ footer span {
 	font-size: 0.875em;
 	/* fix fontsize*/
 }
+
+/******** TABLET MEDIA QUERY ********/
+
+@media all and (min-width: 768px) {
+    /* Tablet styles here */
+
+	/******** BOTTOM SECTION ********/
+.bottom-section .content-wrapper {
+	justify-content: space-evenly;
+
+	
+}
+.section-one {
+	/* width: 29%; */
+	width: 30%;
+	border-bottom: 3px solid #EEE;
+}
+
+.section-two {
+	/* width: 42%; */
+	width: 40%;
+	padding: 0 30px;
+	border-left: 3px solid #EEE;
+	border-right: 3px solid #EEE;
+	border-top: none;
+	border-bottom: none;
+}
+
+.section-three {
+	/* width: 29%; */
+	width: 30%;
+	border-bottom: 3px solid #EEE;
+}
+}
+
+/******** DESKTOP MEDIA QUERY ********/
+
+@media all and (min-width: 1200px) {
+    /* Desktop styles here */
+
+body {
+		font-size: 1em;
+}
+header .content-wrapper {
+justify-content: center;
+align-items: center;
+padding: 20px 0;
+}
+header h1 {
+	padding:0;
+	width: 30%;
+	border-bottom: 3px solid #45610E;
+	text-align: left;
+}
+header nav {
+	width: 21%
+}
+
+header nav ul {
+	display: flex;
+	justify-content: space-between;
+}
+}
+
+
+
